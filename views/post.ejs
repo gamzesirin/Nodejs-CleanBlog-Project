@@ -1,0 +1,76 @@
+<%- include('partials/_header') -%>
+<body>
+
+  <%- include('partials/_navigation') -%>
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1><%= post.title %></h1>
+            <h2 class="subheading"><%= post.detail %></h2>
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              <%= post.date %></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <!-- Post Content -->
+ 
+  <article>
+    <div class="container">
+      <div class="row">
+     
+        <div class="col-lg-8 col-md-10 mx-auto">
+         
+          <h2 class="section-heading">The Final Frontier</h2>
+          <blockquote class="blockquote">The dreams of yesterday are the hopes of today and the reality of tomorrow. Science has not yet mastered prophecy. We predict too much for the next year and yet far too little for the next ten.</blockquote>
+          <h2 class="section-heading">Reaching for the Stars</h2>
+          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+          <a href="#">
+            <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+          </a>
+          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <p>As I stand out here in the wonders of the unknown at Hadley, I sort of realize there’s a fundamental truth to our nature, Man must explore, and this is exploration at its greatest.</p>
+          <p>Placeholder text by
+            <a href="http://spaceipsum.com/">Space Ipsum</a>. Photographs by
+            <a href="https://www.flickr.com/photos/nasacommons/">NASA on The Commons</a>.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4 col-lg-5 container">
+      <div class="tm-bg-gray tm-share-box">
+        <div class="text-center">
+          <a href="/posts/edit/<%= post._id %>" class="btn btn-primary p-3 mb-4 tm-btn-animate tm-btn-download tm-icon-download">
+            <span class="btn-text">Update</span>
+          </a>	
+        </div>	
+        <div class="text-center">
+          <a href="/posts/delete/<%= post._id %>" class="btn btn-primary p-3 mb-4 tm-btn-animate tm-btn-download tm-icon-download">
+            <span class="btn-text">Delete</span>
+          </a>
+        </div>								
+      </div>
+    </div>
+  </article>
+  <hr>
+ 
+
+  <%- include('partials/_footer') -%>
+  
+<!-- Bootstrap core JavaScript -->
+<script src="/vendor/jquery/jquery.min.js"></script>
+<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="/js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
